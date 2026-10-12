@@ -1,0 +1,17 @@
+{
+  "status": "saved",
+  "requires_publish": true,
+  "draft_id": "55f4fea3-8ca7-4c59-a63d-8bc0e7410001~cecfgdraft_6acc3a3de6a48191a21685f4507f2e70",
+  "fields_saved": [
+    "install_script",
+    "start_skill",
+    "network.allowed_domains"
+  ],
+  "custom_domains": [
+    "api.bilibili.com",
+    "www.youtube.com"
+  ],
+  "runtime_applied": false,
+  "publication_verified": false,
+  "install_execution": "existing dependency check passed; installation skipped"
+}

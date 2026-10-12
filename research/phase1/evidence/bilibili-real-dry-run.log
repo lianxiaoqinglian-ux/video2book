@@ -1,0 +1,3 @@
+
+[!] [导航失败][网络]导航接口请求失败：<urlopen error Tunnel connection failed: 403 Forbidden>。建议动作：检查网络连接后重试。建议动作：检查登录凭证有效性，等待后降低频率重试。
+    可用 `python src/cli.py info` 查看环境与工具链状态。

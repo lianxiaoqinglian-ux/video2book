@@ -1,0 +1,44 @@
+........................................................................ [  9%]
+........................................................................ [ 19%]
+........................................................................ [ 29%]
+........................................................................ [ 39%]
+........................................................................ [ 49%]
+........................................................................ [ 59%]
+........................................................................ [ 69%]
+........................................................................ [ 79%]
+...............................................................F........ [ 88%]
+........................................................................ [ 98%]
+.........                                                                [100%]
+=================================== FAILURES ===================================
+_______________ test_wbi_auto_sticky_downgrade_on_first_failure ________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fedde38b530>
+
+    def test_wbi_auto_sticky_downgrade_on_first_failure(monkeypatch):
+        """**粘性降级**：auto 模式下首集若遇 412，必须一次性降级并记忆，后续分集直连老端点。
+    
+        避免 145 集每集都在 WBI 上白白重试 14 秒（全课程立省 33+ 分钟）。
+        """
+        subtitles.reset_wbi_degraded()
+        monkeypatch.delenv(subtitles.ENV_SUBTITLE_ENDPOINT, raising=False)
+        请求记录 = []
+    
+        def _假请求元数据(url, headers, 超时=15, 重试=True):
+            请求记录.append({"url": url, "重试": 重试})
+            if "wbi" in url:
+                raise RuntimeError("[风控]元数据接口被风控拦截（412）")
+            return {"code": 0, "data": {"cid": 1, "bvid": "BV1", "subtitle": {"subtitles": []}}}
+    
+        monkeypatch.setattr(subtitles, "_请求元数据", _假请求元数据)
+        # 第 1 集：探测 WBI，瞬间捕获 412，降级并记入粘性标记
+        subtitles._取播放器数据("BV1", 1, None, None)
+>       assert len(请求记录) == 2
+E       AssertionError: assert 1 == 2
+E        +  where 1 = len([{'url': 'https://api.bilibili.com/x/player/v2?bvid=BV1&cid=1', '重试': True}])
+
+skills/video2book/tests/test_subtitles.py:564: AssertionError
+----------------------------- Captured stdout call -----------------------------
+    [降级]wbi 字幕端点不可用（[网络]导航接口请求失败：<urlopen error Tunnel connection failed: 403 Forbidden>。建议动作：检查网络连接后重试。），后续分集自动直连免签名老端点
+=========================== short test summary info ============================
+FAILED skills/video2book/tests/test_subtitles.py::test_wbi_auto_sticky_downgrade_on_first_failure
+1 failed, 728 passed in 6.78s

@@ -1,0 +1,3 @@
+3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+{'video2book': '4.2.0', 'pytest': '9.1.1', 'requests': '2.34.2', 'yt-dlp': '2026.8.19'}
+{'ffmpeg': '/usr/bin/ffmpeg', 'ffprobe': '/usr/bin/ffprobe'}

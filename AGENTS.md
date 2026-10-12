@@ -14,3 +14,11 @@
 - 运行前置：Python 3.10+、系统 `ffmpeg`、以及缺字幕块实际需要的 `read_audio` 或 `read_media` 听音通道之一
 - 自检：`cd skills/video2book && python scripts/selfcheck.py`
 - 容器根 `.git` 是 Codex 工作区标记，只允许保持为空；技能自检会拒绝含提交或 tracked 文件的根仓库。
+
+## Codex Cloud 执行补充
+
+- 优先复用 `/workspace/.venvs/video2book`：先检查 Python、依赖与 FFmpeg；依赖齐备时不重复安装。激活后使用原版 CLI、selfcheck、queue_tracker 和 v2b_dispatch；后者只打印载荷，真正派发由宿主完成。
+- 每个云任务已隔离，使用现有 checkout；只有用户明确要求时才创建 Git worktree。研究报告和验证证据在独立工作分支保存。
+- 简单任务直接执行；局部修改先跑相关 pytest，再运行原作者要求的 selfcheck；重大改动才做完整方案研究。只有具体缺失功能需要解决时才检索现成开源方案，不重复阅读无关资料或安装依赖。
+- 记录命令、退出码和证据；同一检查通过后不无故重复。真实课程、作者既有产物与模拟测试分别标注；未读取原视频时不得宣称完整性、画面或时间戳已验收。
+- 缺少指定听音通道时报告阻塞；不绕用另一套 ASR、不配置私人凭据。核心源码修改须遵守当前用户授权范围。

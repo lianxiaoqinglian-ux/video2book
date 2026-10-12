@@ -1,0 +1,54 @@
+=================================================================
+【系统运行环境与工具链检查】
+• Python 运行环境: v3.12.14 (/workspace/.venvs/video2book/bin/python)
+• 链接去重能力 : 完整（Python 3.12+：junction 与符号链接都能识别）
+• FFmpeg 状态   : 已就绪 (/usr/bin/ffmpeg)
+• FFprobe 状态  : 已就绪 (/usr/bin/ffprobe)
+• 架构模式      : 宿主 Agent 原生派发模式（多平台统一媒体内核，转录=对话模型原生唯一路径）
+=================================================================
+【多平台媒体采集引擎状态】
+• 本地音视频             : [✓] 就绪 (/usr/bin/ffmpeg)
+• 哔哩哔哩 (Bilibili)   : [✓] 就绪 (未配置 SESSDATA，可匿名抓取或按需 login)
+• YouTube (油管)      : [✓] 就绪 (ffmpeg + yt-dlp)
+• 抖音 (Douyin)       : [✓] 就绪 (requests 2.34.2), ffmpeg: /usr/bin/ffmpeg
+=================================================================
+【阶段一听音通道（按宿主自己的工具列表选择，不要猜）】
+• 听音服务代码 : 未发现 /workspace/video2book/omni-media
+    read_audio（宿主原生听音）  ← 宿主挂载注册名 omni-media（--mode native，零凭证）
+    read_media（外部模型代读）  ← 宿主挂载注册名 omni-media-ext（--mode ext，需 api_key）
+  两者都不可用时：阶段一必须停下并提示先挂载其一（B 站课程有中文字幕时可由字幕链路替代），不得跳过音频保真直接编造正文。
+=================================================================
+【三域路径（代码 / MCP / 产物 互相隔离）】
+• 代码根       : /workspace/video2book/skills/video2book
+• 容器根 home  : /workspace/video2book  [容器标记: 无（容器根可选，不影响可用性）]
+• 产物根       : /workspace/video2book/output  [尚不存在（首次运行会自动创建）]  [来自 当前工作目录下的 output/（默认）]
+• 听音仓库     : /workspace/video2book/omni-media  [未找到，此为预期位置]  （仅为位置提示；通道按你工具列表里的 read_audio / read_media 判定）
+  工作区清单   : /workspace/video2book/output
+  覆盖方式     : export BVB_OUTPUT_DIR=<产物根> / export BVB_HOME=<容器根>，或用 --base-dir
+=================================================================
+【WBI Key 状态】
+• WBI Key：无记录（尚未请求，首次调用自动获取）
+• SESSDATA：无（未传入 --sessdata，本地也无存档）
+• 凭证存档：无（可用 python src/cli.py login --sessdata "<值>" 持久化保存）
+• 抖音 Cookie：无 —— 抖音匿名访问只放行约 20 条作品（实测博主 216 条仅取到 21 条），
+               合集接口亦返回 403，免 cookie 无解。需完整抓取请先执行：
+               python src/cli.py login --douyin-cookie "<Cookie 串>"
+• 抖音凭证存档：无（可用 python src/cli.py login --douyin-cookie "<值>" 持久化保存）
+【上次 412/熔断状态】
+• 无记录
+=================================================================
+【Agent 自主驱动工作协议】：
+0. 类型判定（工作流第一步）: 依课程标题/分集标题判定长文类型，未命中已提供提示词的类型即终止任务
+1. 物理层跑批: python src/cli.py pipeline "<链接>" --all --article-type learning
+   - 长文提示词风格由用户确认：learning=学习（推荐）/ legacy=旧版；不确认即终止任务
+2. 语料与任务书自动生成于 output/<任务名>/
+   - articles/模块XX_*_TASK.md: 模块长文提示词（一个块一篇，读块级逐字稿撰写）
+   - notes/笔记XX_*_TASK.md: 块归并后的复习笔记提示词
+3. 宿主 Agent 主程序以 5 个并发通道（Task子代理或并行生成）读取任务书，直接撰写落盘！
+=================================================================
+【可复制的断点续跑命令示例】：
+python src/cli.py login --sessdata "<你的 SESSDATA>"             # B 站凭证，一次持久化
+python src/cli.py login --douyin-cookie "<你的 Cookie 串>"        # 抖音凭证（匿名只能取约 20 条）
+python src/cli.py pipeline "<链接>" --all --article-type learning
+python src/cli.py pipeline "<链接>" --range 1-10 --article-type learning
+=================================================================

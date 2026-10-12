@@ -1,0 +1,84 @@
+{
+  "workspace": "sample_local_sample",
+  "workspace_path": "/tmp/video2book-phase1-synthetic/output/sample_local_sample",
+  "total": 1,
+  "completed": 0,
+  "pending": 1,
+  "is_stage1_complete": false,
+  "budget": {
+    "audio_tokens_per_sec": 32.0,
+    "context_window_tokens": 1000000,
+    "serial_ok_seconds": 3600,
+    "window_usage_limit": 0.6,
+    "total_audio_tokens": 96,
+    "serial_ok": true,
+    "dispatch_required": false,
+    "suggest_workers": 1,
+    "suggest_batch": 1,
+    "total_audio_min": 0.05,
+    "total_audio_hours": 0.0008333333333333334
+  },
+  "transcript": {
+    "has_plan": true,
+    "plan_target_minutes": 50.0,
+    "plan_ceiling_minutes": 75.0,
+    "blocks_total": 1,
+    "blocks_transcribed": 0,
+    "blocks_pending": 1
+  },
+  "claims": {
+    "ttl_minutes": 360.0,
+    "active": [
+      {
+        "key": "transcribe:1",
+        "kind": "transcribe",
+        "id": 1,
+        "label": "BLK01",
+        "title": "P01",
+        "at": "2026-10-12 01:44:28",
+        "ts": 1791769468.5014508,
+        "target": "/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md",
+        "release_when": "/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md"
+      }
+    ],
+    "registered": [
+      {
+        "key": "transcribe:1",
+        "kind": "transcribe",
+        "id": 1,
+        "label": "BLK01",
+        "title": "P01",
+        "at": "2026-10-12 01:44:28",
+        "ts": 1791769468.5014508,
+        "target": "/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md",
+        "release_when": "/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md"
+      }
+    ],
+    "released_done": 0,
+    "released_stale": 0,
+    "released_now": []
+  },
+  "next": [],
+  "next_transcribe": [
+    {
+      "block_id": 1,
+      "span": "P01",
+      "episodes": [
+        1
+      ],
+      "mode": "block",
+      "pages": [],
+      "targets": [
+        "/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md"
+      ],
+      "duration_min": 0.05,
+      "audio_file": "/tmp/video2book-phase1-synthetic/output/sample_local_sample/audio/P01_sample.m4a",
+      "audio_exists": true,
+      "task_file": "/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_转录任务书.md",
+      "task_file_exists": true,
+      "block_transcript": "/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md",
+      "dispatch_prompt": "【执行规范（单任务直达）】：本任务输入与输出路径均已完全指定。直接读取指定输入文件，完成转录并保存到目标路径；无需也不要检索、扫描项目其他文件或仓库代码。\n\n请阅读转录任务书文件：\n`/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_转录任务书.md`\n调用听音工具转录（**优先 read_media**：它能 output_file 直写落盘、全文 0 Token 进上下文；工具列表里没有 read_media 时才用 read_audio 的 output_mode=\"file\" 取切片自行聆听），严格按照任务书 2.1 节的要求进行纯文本忠实转录（无需时间戳），**首行写来源抬头** `> 来源：**听音转录**——非平台字幕，由讲师原声转录`（下游据它拒绝字幕稿降级覆盖），将完整逐字稿直接写入目标文件：\n`/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md`\n落盘后仅在最后汇报单行：\nBLK01 | /tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md | 字节数 | 执行者\n（严禁在对话中回传逐字稿正文）"
+    }
+  ],
+  "next_note": []
+}

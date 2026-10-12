@@ -1,0 +1,315 @@
+[
+  {
+    "name": "environment",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "-c",
+      "import sys,importlib.metadata as m,shutil; print(sys.version); print({p:m.version(p) for p in [\"video2book\",\"pytest\",\"requests\",\"yt-dlp\"]}); print({p:shutil.which(p) for p in [\"ffmpeg\",\"ffprobe\"]})"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.07,
+    "log": "environment.log"
+  },
+  {
+    "name": "pip-check",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.26,
+    "log": "pip-check.log"
+  },
+  {
+    "name": "selfcheck",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "scripts/selfcheck.py"
+    ],
+    "cwd": "/workspace/video2book/skills/video2book",
+    "exit_code": 0,
+    "seconds": 2.59,
+    "log": "selfcheck.log"
+  },
+  {
+    "name": "pytest",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 1,
+    "seconds": 7.08,
+    "log": "pytest.log"
+  },
+  {
+    "name": "cli-info",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "info"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.15,
+    "log": "cli-info.log"
+  },
+  {
+    "name": "queue-help",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/scripts/queue_tracker.py",
+      "--help"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.09,
+    "log": "queue-help.log"
+  },
+  {
+    "name": "bilibili-real-dry-run",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "pipeline",
+      "https://www.bilibili.com/video/BV14VqVBrEhc",
+      "--page",
+      "1",
+      "--dry-run",
+      "--article-type",
+      "learning",
+      "--base-dir",
+      "/tmp/video2book-phase1-real"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 1,
+    "seconds": 0.1,
+    "log": "bilibili-real-dry-run.log"
+  },
+  {
+    "name": "youtube-real-dry-run",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "pipeline",
+      "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "--page",
+      "1",
+      "--dry-run",
+      "--article-type",
+      "learning",
+      "--base-dir",
+      "/tmp/video2book-phase1-real"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 1,
+    "seconds": 0.39,
+    "log": "youtube-real-dry-run.log"
+  },
+  {
+    "name": "synthetic-audio-create",
+    "command": [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-f",
+      "lavfi",
+      "-i",
+      "sine=frequency=440:duration=3",
+      "-c:a",
+      "pcm_s16le",
+      "/tmp/video2book-phase1-synthetic/sample.wav"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.09,
+    "log": "synthetic-audio-create.log"
+  },
+  {
+    "name": "synthetic-local-pipeline",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "pipeline",
+      "/tmp/video2book-phase1-synthetic/sample.wav",
+      "--all",
+      "--audio-only",
+      "--article-type",
+      "learning",
+      "--base-dir",
+      "/tmp/video2book-phase1-synthetic/output"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.34,
+    "log": "synthetic-local-pipeline.log"
+  },
+  {
+    "name": "synthetic-local-resume",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "pipeline",
+      "/tmp/video2book-phase1-synthetic/sample.wav",
+      "--all",
+      "--audio-only",
+      "--article-type",
+      "learning",
+      "--base-dir",
+      "/tmp/video2book-phase1-synthetic/output"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.19,
+    "log": "synthetic-local-resume.log"
+  },
+  {
+    "name": "synthetic-ffprobe",
+    "command": [
+      "ffprobe",
+      "-v",
+      "error",
+      "-show_entries",
+      "stream=codec_name,sample_rate,channels",
+      "-of",
+      "json",
+      "/tmp/video2book-phase1-synthetic/output/sample_local_sample/audio/P01_sample.m4a"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.07,
+    "log": "synthetic-ffprobe.log"
+  },
+  {
+    "name": "synthetic-queue-summary",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/scripts/queue_tracker.py",
+      "--dir",
+      "/tmp/video2book-phase1-synthetic/output/sample_local_sample",
+      "--summary"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.1,
+    "log": "synthetic-queue-summary.log"
+  },
+  {
+    "name": "synthetic-queue-claim",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/scripts/queue_tracker.py",
+      "--dir",
+      "/tmp/video2book-phase1-synthetic/output/sample_local_sample",
+      "--next-transcribe",
+      "1",
+      "--claim",
+      "--json"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.09,
+    "log": "synthetic-queue-claim.log"
+  },
+  {
+    "name": "synthetic-queue-after-claim",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/scripts/queue_tracker.py",
+      "--dir",
+      "/tmp/video2book-phase1-synthetic/output/sample_local_sample",
+      "--next-transcribe",
+      "1",
+      "--json"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.1,
+    "log": "synthetic-queue-after-claim.log"
+  },
+  {
+    "name": "synthetic-queue-release",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/scripts/queue_tracker.py",
+      "--dir",
+      "/tmp/video2book-phase1-synthetic/output/sample_local_sample",
+      "--release",
+      "all",
+      "--json"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.09,
+    "log": "synthetic-queue-release.log"
+  },
+  {
+    "name": "synthetic-dispatch-print",
+    "command": [
+      "timeout",
+      "30",
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/tools/v2b_dispatch.py",
+      "transcribe",
+      "1",
+      "--base-dir",
+      "/tmp/video2book-phase1-synthetic/output"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.15,
+    "log": "synthetic-dispatch-print.log"
+  },
+  {
+    "name": "ffmpeg-version",
+    "command": [
+      "ffmpeg",
+      "-version"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.08,
+    "log": "ffmpeg-version.log"
+  },
+  {
+    "name": "ffprobe-version",
+    "command": [
+      "ffprobe",
+      "-version"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.07,
+    "log": "ffprobe-version.log"
+  },
+  {
+    "name": "final-selfcheck",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "scripts/selfcheck.py"
+    ],
+    "cwd": "/workspace/video2book/skills/video2book",
+    "exit_code": 0,
+    "seconds": 3.05,
+    "log": "final-selfcheck.log"
+  },
+  {
+    "name": "archived-source-commit",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/tmp/video2book-course-reference",
+    "exit_code": 0,
+    "seconds": 0.01,
+    "log": "archived-source-commit.log"
+  }
+]

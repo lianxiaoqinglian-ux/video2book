@@ -1,0 +1,14 @@
+### 课程工作区：sample_local_sample
+### 批次共 1 项（transcribe，取 1）
+### 在途认领 0 条
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+### TAG=BLK01
+【执行规范（单任务直达）】：本任务输入与输出路径均已完全指定。直接读取指定输入文件，完成转录并保存到目标路径；无需也不要检索、扫描项目其他文件或仓库代码。
+
+请阅读转录任务书文件：
+`/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_转录任务书.md`
+调用听音工具转录（**优先 read_media**：它能 output_file 直写落盘、全文 0 Token 进上下文；工具列表里没有 read_media 时才用 read_audio 的 output_mode="file" 取切片自行聆听），严格按照任务书 2.1 节的要求进行纯文本忠实转录（无需时间戳），**首行写来源抬头** `> 来源：**听音转录**——非平台字幕，由讲师原声转录`（下游据它拒绝字幕稿降级覆盖），将完整逐字稿直接写入目标文件：
+`/tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md`
+落盘后仅在最后汇报单行：
+BLK01 | /tmp/video2book-phase1-synthetic/output/sample_local_sample/subtitles/BLK01_P01_逐字稿.md | 字节数 | 执行者
+（严禁在对话中回传逐字稿正文）

@@ -1,0 +1,14 @@
+{
+  "classification": "3秒正弦波，非真实教学课程；仅媒体管线和重跑缓存验证",
+  "before": {
+    "block_plan.json": "459a17b75d4292b28f6baf106ff6cd8f6f8ad08988db54d4dc157d33519f02cd",
+    "parts.json": "da23e08f2008d1d35112071cead3cf5aab0f5fabbf96001069cbad0d120f8951",
+    "audio/P01_sample.m4a": "ca31f7938c482191d1c3dfc310c8be2050b9e2e3443411c2626a75badac7212d"
+  },
+  "after": {
+    "block_plan.json": "459a17b75d4292b28f6baf106ff6cd8f6f8ad08988db54d4dc157d33519f02cd",
+    "parts.json": "da23e08f2008d1d35112071cead3cf5aab0f5fabbf96001069cbad0d120f8951",
+    "audio/P01_sample.m4a": "ca31f7938c482191d1c3dfc310c8be2050b9e2e3443411c2626a75badac7212d"
+  },
+  "unchanged": true
+}

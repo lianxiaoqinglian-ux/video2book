@@ -1,0 +1,509 @@
+{
+  "classification": "作者公开归档的真实语料/教材审计；不是本次视频获取、转录或新教材生成",
+  "repository": "https://github.com/LINJIANG12/video2book-courses",
+  "source_video": "https://www.bilibili.com/video/BV1yw4m1S7Be/",
+  "files": [
+    {
+      "path": "计算机/数据库/SQL两小时半入门/subtitles/BLK01_P01上_逐字稿.md",
+      "commit": "675f5d59107498a7e2091d8c46f4f90d97e926cd",
+      "bytes": 43741,
+      "sha256": "4e9228afb5a732250994234f6df2e53e11b4cdf01b973890af7702bb4dd4d73c",
+      "lines": 563,
+      "render_summary": {
+        "alert_blocks": 0,
+        "stray_art": 0,
+        "fences_unbalanced": 0,
+        "fence_without_lang": 0,
+        "formula_breaks": 0
+      },
+      "fatal_render_total": 0,
+      "markdown_images": 0,
+      "timestamp_lines": 282,
+      "headings": []
+    },
+    {
+      "path": "计算机/数据库/SQL两小时半入门/textbooks/模块01_SQL关系型数据库从入门到全流程实战精通_精读全书.md",
+      "commit": "675f5d59107498a7e2091d8c46f4f90d97e926cd",
+      "bytes": 85839,
+      "sha256": "3eafa8c6c760014103132be9b8e43d21bbbf50ba165b26d73b73fb24febb756e",
+      "lines": 1686,
+      "render_summary": {
+        "alert_blocks": 0,
+        "stray_art": 0,
+        "fences_unbalanced": 0,
+        "fence_without_lang": 0,
+        "formula_breaks": 0
+      },
+      "fatal_render_total": 0,
+      "markdown_images": 0,
+      "timestamp_lines": 0,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# 【SQL数据库】SQL两小时半快速入门到精通 建议反复观看 学不会自我反省·SQL关系型数据库从入门到全流程实战精通"
+        },
+        {
+          "line": 10,
+          "text": "## 导读与全景目录"
+        },
+        {
+          "line": 18,
+          "text": "## 关系型数据库基础与 MySQL 入门实操"
+        },
+        {
+          "line": 29,
+          "text": "### 数据库与数据库管理系统"
+        },
+        {
+          "line": 33,
+          "text": "#### 数据持久化介质演进"
+        },
+        {
+          "line": 41,
+          "text": "#### 数据库管理系统与访问交互"
+        },
+        {
+          "line": 61,
+          "text": "### 关系型与非关系型数据库架构分类"
+        },
+        {
+          "line": 65,
+          "text": "#### 关系型数据库及其管理系统"
+        },
+        {
+          "line": 77,
+          "text": "#### 非关系型数据库及其存储形态"
+        },
+        {
+          "line": 97,
+          "text": "#### 结构化查询语言的通信定位"
+        },
+        {
+          "line": 112,
+          "text": "### MySQL 与客户端工具安装配置"
+        },
+        {
+          "line": 116,
+          "text": "#### 运行环境选型与组件定制"
+        },
+        {
+          "line": 127,
+          "text": "#### 跨平台安装要点与 Workbench 连接"
+        },
+        {
+          "line": 131,
+          "text": "##### Windows 环境安装要点"
+        },
+        {
+          "line": 142,
+          "text": "##### macOS 环境安装要点"
+        },
+        {
+          "line": 150,
+          "text": "##### Workbench 工作区初始化与连接验证"
+        },
+        {
+          "line": 166,
+          "text": "### 关系模型与键约束机制"
+        },
+        {
+          "line": 170,
+          "text": "#### 表格结构与主键唯一性约束"
+        },
+        {
+          "line": 199,
+          "text": "#### 外键参照与跨表关联机制"
+        },
+        {
+          "line": 229,
+          "text": "#### 自引用外键与层级关系表示"
+        },
+        {
+          "line": 253,
+          "text": "#### 复合主键与主外键重叠设计"
+        },
+        {
+          "line": 286,
+          "text": "### SQL 基础语法规范与库级管理"
+        },
+        {
+          "line": 290,
+          "text": "#### 语法编写惯例与反引号规避冲突"
+        },
+        {
+          "line": 312,
+          "text": "#### 数据库生命周期管理指令"
+        },
+        {
+          "line": 316,
+          "text": "##### 创建数据库"
+        },
+        {
+          "line": 323,
+          "text": "##### 检索数据库列表"
+        },
+        {
+          "line": 330,
+          "text": "##### 切换当前工作数据库"
+        },
+        {
+          "line": 337,
+          "text": "##### 物理删除数据库"
+        },
+        {
+          "line": 349,
+          "text": "### MySQL 核心数据类型"
+        },
+        {
+          "line": 355,
+          "text": "#### 数值与文本数据类型"
+        },
+        {
+          "line": 370,
+          "text": "#### 二进制与时态数据类型"
+        },
+        {
+          "line": 390,
+          "text": "### 数据表结构定义与模式变更"
+        },
+        {
+          "line": 394,
+          "text": "#### 数据表的创建与模式查看"
+        },
+        {
+          "line": 401,
+          "text": "##### 创建数据表（CREATE TABLE）"
+        },
+        {
+          "line": 421,
+          "text": "##### 查看数据表元数据结构（DESCRIBE）"
+        },
+        {
+          "line": 436,
+          "text": "#### 数据表结构的动态变更与删除"
+        },
+        {
+          "line": 440,
+          "text": "##### 为数据表追加新字段（ALTER TABLE ... ADD）"
+        },
+        {
+          "line": 453,
+          "text": "##### 移除数据表已有字段（ALTER TABLE ... DROP COLUMN）"
+        },
+        {
+          "line": 464,
+          "text": "##### 物理销毁数据表（DROP TABLE）"
+        },
+        {
+          "line": 477,
+          "text": "## SQL核心数据操作与多表关系建模"
+        },
+        {
+          "line": 484,
+          "text": "### 主键独立声明与数据写入基础"
+        },
+        {
+          "line": 486,
+          "text": "#### 主键约束的独立声明写法"
+        },
+        {
+          "line": 501,
+          "text": "#### 基础插入语法与列顺序映射"
+        },
+        {
+          "line": 531,
+          "text": "#### 空值占位与主键冲突拦截"
+        },
+        {
+          "line": 551,
+          "text": "#### 显式指定列名插入与默认值回退"
+        }
+      ]
+    }
+  ],
+  "term_spot_checks": [
+    {
+      "term": "DBMS",
+      "transcript": {
+        "count": 3,
+        "first_matches": [
+          {
+            "line": 27,
+            "excerpt": "02:45 縮寫就是DBMS哦。"
+          },
+          {
+            "line": 54,
+            "excerpt": "05:21 英文的話是Relational Database Management System哦，縮寫就是RDBMS哦。"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 15,
+        "first_matches": [
+          {
+            "line": 43,
+            "excerpt": "这些专门负责对底层数据执行结构化整理、落盘存储并对外提供高效检索调度的软件，统称为“数据库管理系统（Database Management System，DBMS）”。"
+          },
+          {
+            "line": 45,
+            "excerpt": "有了 DBMS 作为中间层调度者，应用程序与底层数据之间的所有读写与检索交互都变得清晰高效。以视频网站检索内容为例：当用户在搜索栏输入目标关键词“小白”时，网站的前端与后端业务系统不会直接去物理磁盘里扫描文件，而是向底层的 DBMS 发送查询请求：“请帮我找出所有标题或标签包含‘小白’的视频信息”。"
+          }
+        ]
+      }
+    },
+    {
+      "term": "RDBMS",
+      "transcript": {
+        "count": 2,
+        "first_matches": [
+          {
+            "line": 54,
+            "excerpt": "05:21 英文的話是Relational Database Management System哦，縮寫就是RDBMS哦。"
+          },
+          {
+            "line": 71,
+            "excerpt": "06:46 縮寫的話就是NRDBMS哦。"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 8,
+        "first_matches": [
+          {
+            "line": 69,
+            "excerpt": "> **定义**：关系型数据库管理系统（Relational Database Management System，RDBMS）是指基于关系模型建立的数据库系统，通过行列构成的表格组织数据，利用键约束维护表间关联。"
+          },
+          {
+            "line": 71,
+            "excerpt": "业界代表性的 RDBMS 软件包括："
+          }
+        ]
+      }
+    },
+    {
+      "term": "NoSQL",
+      "transcript": {
+        "count": 1,
+        "first_matches": [
+          {
+            "line": 56,
+            "excerpt": "05:30 那再來第二種，第二種叫做「非關聯式資料庫」哦。那也可以叫做NoSQL或是Not Only SQL。"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 1,
+        "first_matches": [
+          {
+            "line": 79,
+            "excerpt": "非关系型数据库通常被称为 NoSQL，现代含义演化为“Not Only SQL”。它并不是一种单一的架构模式，而是一个统称分类——只要没有采用传统的“二维表格加外键关联”模式来组织数据的数据库系统，均归入此类。"
+          }
+        ]
+      }
+    },
+    {
+      "term": "MySQL",
+      "transcript": {
+        "count": 35,
+        "first_matches": [
+          {
+            "line": 52,
+            "excerpt": "05:07 MySQL啊、Oracle啊、PostgreSQL啊、SQL Server啊等等等等，還有很多我沒有列出來哦。"
+          },
+          {
+            "line": 87,
+            "excerpt": "07:50 那這邊的軟體呢，也就是關聯式資料庫管理系統，假設它使用的是MySQL，"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 49,
+        "first_matches": [
+          {
+            "line": 12,
+            "excerpt": "1. 关系型数据库基础与 MySQL 入门实操（P01上）"
+          },
+          {
+            "line": 18,
+            "excerpt": "## 关系型数据库基础与 MySQL 入门实操"
+          }
+        ]
+      }
+    },
+    {
+      "term": "SQL",
+      "transcript": {
+        "count": 67,
+        "first_matches": [
+          {
+            "line": 1,
+            "excerpt": "00:00 好，大家好，這是一個SQL的入門影片，那不管你是想要做遊戲、做網站，還是做app等等的，你都非常大的機率會使用到資料庫。"
+          },
+          {
+            "line": 48,
+            "excerpt": "04:38 第一種呢，叫做「關聯式資料庫」哦，我們也可以把它叫做SQL資料庫哦。這個SQL可以念做「sequel」哦。"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 187,
+        "first_matches": [
+          {
+            "line": 1,
+            "excerpt": "# 【SQL数据库】SQL两小时半快速入门到精通 建议反复观看 学不会自我反省·SQL关系型数据库从入门到全流程实战精通"
+          },
+          {
+            "line": 3,
+            "excerpt": "> **所属课程**：【SQL数据库】SQL两小时半快速入门到精通 建议反复观看 学不会自我反省  "
+          }
+        ]
+      }
+    },
+    {
+      "term": "Workbench",
+      "transcript": {
+        "count": 10,
+        "first_matches": [
+          {
+            "line": 142,
+            "excerpt": "12:41 然後點MySQL Workbench。一樣哦，我們就選擇最上面的最新的版本，把它加進來。"
+          },
+          {
+            "line": 161,
+            "excerpt": "14:05 那這個MySQL Workbench呢，它是一個操作介面，可以讓我們連線到MySQL，然後對資料庫做一些操作。"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 8,
+        "first_matches": [
+          {
+            "line": 124,
+            "excerpt": "2. **MySQL Workbench**：官方提供的可视化图形界面（GUI）客户端，用于连接 Server、编写并执行 SQL 脚本；"
+          },
+          {
+            "line": 127,
+            "excerpt": "#### 跨平台安装要点与 Workbench 连接"
+          }
+        ]
+      }
+    },
+    {
+      "term": "CREATE DATABASE",
+      "transcript": {
+        "count": 3,
+        "first_matches": [
+          {
+            "line": 461,
+            "excerpt": "那要創建資料庫的話，我們可以寫 CREATE DATABASE，然後加上資料庫的名稱哦，看你想要把它叫做什麼。"
+          },
+          {
+            "line": 485,
+            "excerpt": "那講到這邊大家應該有發現，這個 CREATE DATABASE 還有 SHOW DATABASES，它們的文字顏色都是藍色的嘛。"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 5,
+        "first_matches": [
+          {
+            "line": 301,
+            "excerpt": "   CREATE DATABASE database;"
+          },
+          {
+            "line": 306,
+            "excerpt": "   CREATE DATABASE `database`;"
+          }
+        ]
+      }
+    },
+    {
+      "term": "CREATE TABLE",
+      "transcript": {
+        "count": 1,
+        "first_matches": [
+          {
+            "line": 561,
+            "excerpt": "資料庫喔。因為這樣子 MySQL 它才會知道要把表格創建在哪一個資料庫裡面嘛。那這邊我們就用自己創建的這個 sql_tutorial 喔。要選擇使用哪一個資料庫的話，我們可以寫 USE，然後接著資料庫的名稱喔。sql_tutorial。好，那我們執行它。那執行成功之後呢，我們現在就是在這個資料庫當中了。OK。那再來呢，因為在創建表格的時候，我們要去設定每一個"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 13,
+        "first_matches": [
+          {
+            "line": 401,
+            "excerpt": "##### 创建数据表（CREATE TABLE）"
+          },
+          {
+            "line": 405,
+            "excerpt": "CREATE TABLE `student` ("
+          }
+        ]
+      }
+    },
+    {
+      "term": "DESCRIBE",
+      "transcript": {
+        "count": 2,
+        "first_matches": [
+          {
+            "line": 561,
+            "excerpt": "資料庫喔。因為這樣子 MySQL 它才會知道要把表格創建在哪一個資料庫裡面嘛。那這邊我們就用自己創建的這個 sql_tutorial 喔。要選擇使用哪一個資料庫的話，我們可以寫 USE，然後接著資料庫的名稱喔。sql_tutorial。好，那我們執行它。那執行成功之後呢，我們現在就是在這個資料庫當中了。OK。那再來呢，因為在創建表格的時候，我們要去設定每一個"
+          },
+          {
+            "line": 563,
+            "excerpt": "本來是 add 就改成 drop 好 drop column GPA OK 這樣子寫就是把 student 這個表格裡面的 GPA 這個屬性刪除掉 好執行 執行成功了嘛 我們再 describe 一次 誒可以看到這個 GPA 的屬性又不見了嘛 OK"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 6,
+        "first_matches": [
+          {
+            "line": 421,
+            "excerpt": "##### 查看数据表元数据结构（DESCRIBE）"
+          },
+          {
+            "line": 422,
+            "excerpt": "表创建成功后，若需检视该表在系统目录中的模式定义与字段规格，可执行 `DESCRIBE` 指令（亦可缩写为 `DESC`）："
+          }
+        ]
+      }
+    },
+    {
+      "term": "GPA",
+      "transcript": {
+        "count": 2,
+        "first_matches": [
+          {
+            "line": 561,
+            "excerpt": "資料庫喔。因為這樣子 MySQL 它才會知道要把表格創建在哪一個資料庫裡面嘛。那這邊我們就用自己創建的這個 sql_tutorial 喔。要選擇使用哪一個資料庫的話，我們可以寫 USE，然後接著資料庫的名稱喔。sql_tutorial。好，那我們執行它。那執行成功之後呢，我們現在就是在這個資料庫當中了。OK。那再來呢，因為在創建表格的時候，我們要去設定每一個"
+          },
+          {
+            "line": 563,
+            "excerpt": "本來是 add 就改成 drop 好 drop column GPA OK 這樣子寫就是把 student 這個表格裡面的 GPA 這個屬性刪除掉 好執行 執行成功了嘛 我們再 describe 一次 誒可以看到這個 GPA 的屬性又不見了嘛 OK"
+          }
+        ]
+      },
+      "textbook": {
+        "count": 7,
+        "first_matches": [
+          {
+            "line": 441,
+            "excerpt": "假设业务需求变更，我们需要在已存在的 `student` 表中追加一个记录学生学业绩点的属性列 `GPA`，要求数值为三位数且包含两位小数："
+          },
+          {
+            "line": 444,
+            "excerpt": "ALTER TABLE `student` ADD `GPA` DECIMAL(3, 2);"
+          }
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "原视频未读取，原声忠实度、截图遗漏和时间戳准确性尚未验证",
+    "归档无block_plan/parts/manifest，不能当作可直接续跑的完整工作区",
+    "词项命中只证明出现，不证明讲解完整或正确"
+  ]
+}
