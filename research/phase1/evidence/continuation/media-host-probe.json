@@ -1,0 +1,9 @@
+{
+  "operation": "原版AudioFetcher只读获取P02音频流信息，记录主机名，不保存带签名的URL",
+  "source_bvid": "BV14VqVBrEhc",
+  "cid": 35185494125,
+  "media_host": "upos-sz-mirrorcosov.bilivideo.com",
+  "stream_available": true,
+  "error_type": "URLError",
+  "proxy_403": true
+}

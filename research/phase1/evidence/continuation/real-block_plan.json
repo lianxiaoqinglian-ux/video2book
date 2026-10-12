@@ -1,0 +1,813 @@
+{
+  "version": 1,
+  "plan_source": "metadata",
+  "audio_ready": false,
+  "materialization": {
+    "status": "pending",
+    "audio_ready": false
+  },
+  "limits": {
+    "target": 30.0,
+    "ceiling": 75.0,
+    "effective": 30.0,
+    "min": 20.0,
+    "max": 40.0
+  },
+  "source": {
+    "kind": "parts",
+    "part_count": 9,
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "parts": [
+      {
+        "cid": 34791557182,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=1",
+        "page": 1,
+        "title": "1、绪论",
+        "duration": 1120.0
+      },
+      {
+        "cid": 35185494125,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=2",
+        "page": 2,
+        "title": "2、关系数据库",
+        "duration": 2002.0
+      },
+      {
+        "cid": 34791621080,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=3",
+        "page": 3,
+        "title": "3、SQL",
+        "duration": 3028.0
+      },
+      {
+        "cid": 34791624402,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=4",
+        "page": 4,
+        "title": "4、数据库安全性",
+        "duration": 601.0
+      },
+      {
+        "cid": 34791686341,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=5",
+        "page": 5,
+        "title": "5、数据库完整性",
+        "duration": 1214.0
+      },
+      {
+        "cid": 34791687600,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=6",
+        "page": 6,
+        "title": "6、关系数据库理论",
+        "duration": 2216.0
+      },
+      {
+        "cid": 34791690049,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=7",
+        "page": 7,
+        "title": "7、数据库设计",
+        "duration": 1091.0
+      },
+      {
+        "cid": 35185494098,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=8",
+        "page": 8,
+        "title": "8、数据库恢复技术",
+        "duration": 1804.0
+      },
+      {
+        "cid": 34792017260,
+        "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=9",
+        "page": 9,
+        "title": "9、并发控制",
+        "duration": 1646.0
+      }
+    ],
+    "part_fingerprints": [
+      "3b2e27b68d70d3ef76ca0da8ef971760c1978ca0f2540c1eb5a9f8aa3199f3c0",
+      "dcc602f7aa1d69db0b4e9a84fd88047a935f2d11fac69ff22af1c80aae413032",
+      "09c7f7e4885f0cc64226b87352190c9dedbaa9beeb0ae4df9e277e844d1de0ed",
+      "5f1e123ddb2428f05172a134a0a8e87553a39ab8d4172d1e285d97ab87c6efcd",
+      "dfbb7ff1eb2da3cef1c3aa3c9199451e5716974c20bf8a1360e2213a4ad4c60d",
+      "3df759ae8ea6d0677ccf36c96810d5fef2d2b8c5fe15791bb09fddd3b5924936",
+      "f77de4921b24786f4147f6dd2a9500da6d62090ef2115355dc77aef5100c0992",
+      "1dc9087e06c166f8f74080068359ebf76ec6cb618a8129a270fdf4355dfb82ac",
+      "5ca179f46d0b81b5813a58fa0152c1796d8c5b5cbc2b07a32481b5322986091e"
+    ],
+    "digest": "20efdbcfa5894a35a07a358bb5669bf77cc569debd1fa89039ac1a09b378b54b"
+  },
+  "blocks": [
+    {
+      "block_id": 1,
+      "title": "1、绪论",
+      "span": "P01",
+      "episodes": [
+        1
+      ],
+      "units": [
+        {
+          "page": 1,
+          "label": "P01",
+          "split": false,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 1120.0,
+          "duration_sec": 1120.0,
+          "source": {
+            "cid": 34791557182,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=1",
+            "page": 1,
+            "title": "1、绪论",
+            "duration": 1120.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 1,
+          "label": "P01",
+          "start_sec": 0.0,
+          "end_sec": 1120.0,
+          "start": "00:00:00",
+          "end": "00:18:40",
+          "duration_sec": 1120.0,
+          "episode_split": false,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 34791557182,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=1",
+              "page": 1,
+              "title": "1、绪论",
+              "duration": 1120.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 1120.0,
+      "duration_min": 18.67,
+      "source": {
+        "kind": "parts",
+        "part_count": 1,
+        "pages": [
+          1
+        ],
+        "parts": [
+          {
+            "cid": 34791557182,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=1",
+            "page": 1,
+            "title": "1、绪论",
+            "duration": 1120.0
+          }
+        ],
+        "part_fingerprints": [
+          "3b2e27b68d70d3ef76ca0da8ef971760c1978ca0f2540c1eb5a9f8aa3199f3c0"
+        ],
+        "digest": "ad50b6183ee12c9038fe3644f71fdeb5dadf5d379869ef776d5d491c5fc7cc06"
+      },
+      "episode_split": false,
+      "single_episode": true,
+      "audio_ready": false
+    },
+    {
+      "block_id": 2,
+      "title": "2、关系数据库",
+      "span": "P02",
+      "episodes": [
+        2
+      ],
+      "units": [
+        {
+          "page": 2,
+          "label": "P02",
+          "split": false,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 2002.0,
+          "duration_sec": 2002.0,
+          "source": {
+            "cid": 35185494125,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=2",
+            "page": 2,
+            "title": "2、关系数据库",
+            "duration": 2002.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 2,
+          "label": "P02",
+          "start_sec": 0.0,
+          "end_sec": 2002.0,
+          "start": "00:00:00",
+          "end": "00:33:22",
+          "duration_sec": 2002.0,
+          "episode_split": false,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 35185494125,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=2",
+              "page": 2,
+              "title": "2、关系数据库",
+              "duration": 2002.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 2002.0,
+      "duration_min": 33.37,
+      "source": {
+        "kind": "parts",
+        "part_count": 1,
+        "pages": [
+          2
+        ],
+        "parts": [
+          {
+            "cid": 35185494125,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=2",
+            "page": 2,
+            "title": "2、关系数据库",
+            "duration": 2002.0
+          }
+        ],
+        "part_fingerprints": [
+          "dcc602f7aa1d69db0b4e9a84fd88047a935f2d11fac69ff22af1c80aae413032"
+        ],
+        "digest": "2437e89fe7b907071e6dd90f40af42cf4ef2ef3ae9b096d6f10b9e955ae0eba1"
+      },
+      "episode_split": false,
+      "single_episode": true,
+      "audio_ready": false
+    },
+    {
+      "block_id": 3,
+      "title": "3、SQL",
+      "span": "P03上",
+      "episodes": [
+        3
+      ],
+      "units": [
+        {
+          "page": 3,
+          "label": "P03上",
+          "split": true,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 1514.0,
+          "duration_sec": 1514.0,
+          "source": {
+            "cid": 34791621080,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=3",
+            "page": 3,
+            "title": "3、SQL",
+            "duration": 3028.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 3,
+          "label": "P03上",
+          "start_sec": 0.0,
+          "end_sec": 1514.0,
+          "start": "00:00:00",
+          "end": "00:25:14",
+          "duration_sec": 1514.0,
+          "episode_split": true,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 34791621080,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=3",
+              "page": 3,
+              "title": "3、SQL",
+              "duration": 3028.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 1514.0,
+      "duration_min": 25.23,
+      "source": {
+        "kind": "parts",
+        "part_count": 1,
+        "pages": [
+          3
+        ],
+        "parts": [
+          {
+            "cid": 34791621080,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=3",
+            "page": 3,
+            "title": "3、SQL",
+            "duration": 3028.0
+          }
+        ],
+        "part_fingerprints": [
+          "09c7f7e4885f0cc64226b87352190c9dedbaa9beeb0ae4df9e277e844d1de0ed"
+        ],
+        "digest": "ba718523a49f7d604e6a6719ef0e305c50b8b480e573aa5b7647a90e2dd7d29a"
+      },
+      "episode_split": true,
+      "single_episode": false,
+      "audio_ready": false
+    },
+    {
+      "block_id": 4,
+      "title": "3、SQL",
+      "span": "P03下-P04",
+      "episodes": [
+        3,
+        4
+      ],
+      "units": [
+        {
+          "page": 3,
+          "label": "P03下",
+          "split": true,
+          "source_offset_sec": 1514.0,
+          "start_sec": 1514.0,
+          "end_sec": 3028.0,
+          "duration_sec": 1514.0,
+          "source": {
+            "cid": 34791621080,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=3",
+            "page": 3,
+            "title": "3、SQL",
+            "duration": 3028.0
+          }
+        },
+        {
+          "page": 4,
+          "label": "P04",
+          "split": false,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 601.0,
+          "duration_sec": 601.0,
+          "source": {
+            "cid": 34791624402,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=4",
+            "page": 4,
+            "title": "4、数据库安全性",
+            "duration": 601.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 3,
+          "label": "P03下",
+          "start_sec": 0.0,
+          "end_sec": 1514.0,
+          "start": "00:00:00",
+          "end": "00:25:14",
+          "duration_sec": 1514.0,
+          "episode_split": true,
+          "source": {
+            "offset_sec": 1514.0,
+            "metadata": {
+              "cid": 34791621080,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=3",
+              "page": 3,
+              "title": "3、SQL",
+              "duration": 3028.0
+            }
+          }
+        },
+        {
+          "page": 4,
+          "label": "P04",
+          "start_sec": 1514.0,
+          "end_sec": 2115.0,
+          "start": "00:25:14",
+          "end": "00:35:15",
+          "duration_sec": 601.0,
+          "episode_split": false,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 34791624402,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=4",
+              "page": 4,
+              "title": "4、数据库安全性",
+              "duration": 601.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 2115.0,
+      "duration_min": 35.25,
+      "source": {
+        "kind": "parts",
+        "part_count": 2,
+        "pages": [
+          3,
+          4
+        ],
+        "parts": [
+          {
+            "cid": 34791621080,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=3",
+            "page": 3,
+            "title": "3、SQL",
+            "duration": 3028.0
+          },
+          {
+            "cid": 34791624402,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=4",
+            "page": 4,
+            "title": "4、数据库安全性",
+            "duration": 601.0
+          }
+        ],
+        "part_fingerprints": [
+          "09c7f7e4885f0cc64226b87352190c9dedbaa9beeb0ae4df9e277e844d1de0ed",
+          "5f1e123ddb2428f05172a134a0a8e87553a39ab8d4172d1e285d97ab87c6efcd"
+        ],
+        "digest": "d2b4e9fb245906e37af54564a6248a1b068c73a42aee6df7bbfd111b9b5c55a5"
+      },
+      "episode_split": true,
+      "single_episode": false,
+      "audio_ready": false
+    },
+    {
+      "block_id": 5,
+      "title": "5、数据库完整性",
+      "span": "P05",
+      "episodes": [
+        5
+      ],
+      "units": [
+        {
+          "page": 5,
+          "label": "P05",
+          "split": false,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 1214.0,
+          "duration_sec": 1214.0,
+          "source": {
+            "cid": 34791686341,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=5",
+            "page": 5,
+            "title": "5、数据库完整性",
+            "duration": 1214.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 5,
+          "label": "P05",
+          "start_sec": 0.0,
+          "end_sec": 1214.0,
+          "start": "00:00:00",
+          "end": "00:20:14",
+          "duration_sec": 1214.0,
+          "episode_split": false,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 34791686341,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=5",
+              "page": 5,
+              "title": "5、数据库完整性",
+              "duration": 1214.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 1214.0,
+      "duration_min": 20.23,
+      "source": {
+        "kind": "parts",
+        "part_count": 1,
+        "pages": [
+          5
+        ],
+        "parts": [
+          {
+            "cid": 34791686341,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=5",
+            "page": 5,
+            "title": "5、数据库完整性",
+            "duration": 1214.0
+          }
+        ],
+        "part_fingerprints": [
+          "dfbb7ff1eb2da3cef1c3aa3c9199451e5716974c20bf8a1360e2213a4ad4c60d"
+        ],
+        "digest": "207121b859028f02273c62f6ae0472e2507c0abe82103350cdd1f19c23359716"
+      },
+      "episode_split": false,
+      "single_episode": true,
+      "audio_ready": false
+    },
+    {
+      "block_id": 6,
+      "title": "6、关系数据库理论",
+      "span": "P06",
+      "episodes": [
+        6
+      ],
+      "units": [
+        {
+          "page": 6,
+          "label": "P06",
+          "split": false,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 2216.0,
+          "duration_sec": 2216.0,
+          "source": {
+            "cid": 34791687600,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=6",
+            "page": 6,
+            "title": "6、关系数据库理论",
+            "duration": 2216.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 6,
+          "label": "P06",
+          "start_sec": 0.0,
+          "end_sec": 2216.0,
+          "start": "00:00:00",
+          "end": "00:36:56",
+          "duration_sec": 2216.0,
+          "episode_split": false,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 34791687600,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=6",
+              "page": 6,
+              "title": "6、关系数据库理论",
+              "duration": 2216.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 2216.0,
+      "duration_min": 36.93,
+      "source": {
+        "kind": "parts",
+        "part_count": 1,
+        "pages": [
+          6
+        ],
+        "parts": [
+          {
+            "cid": 34791687600,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=6",
+            "page": 6,
+            "title": "6、关系数据库理论",
+            "duration": 2216.0
+          }
+        ],
+        "part_fingerprints": [
+          "3df759ae8ea6d0677ccf36c96810d5fef2d2b8c5fe15791bb09fddd3b5924936"
+        ],
+        "digest": "e9df9b636f04e791a242a18d1deeb4b6881d78dec3ed8b9381d4377b95647b46"
+      },
+      "episode_split": false,
+      "single_episode": true,
+      "audio_ready": false
+    },
+    {
+      "block_id": 7,
+      "title": "7、数据库设计",
+      "span": "P07",
+      "episodes": [
+        7
+      ],
+      "units": [
+        {
+          "page": 7,
+          "label": "P07",
+          "split": false,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 1091.0,
+          "duration_sec": 1091.0,
+          "source": {
+            "cid": 34791690049,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=7",
+            "page": 7,
+            "title": "7、数据库设计",
+            "duration": 1091.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 7,
+          "label": "P07",
+          "start_sec": 0.0,
+          "end_sec": 1091.0,
+          "start": "00:00:00",
+          "end": "00:18:11",
+          "duration_sec": 1091.0,
+          "episode_split": false,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 34791690049,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=7",
+              "page": 7,
+              "title": "7、数据库设计",
+              "duration": 1091.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 1091.0,
+      "duration_min": 18.18,
+      "source": {
+        "kind": "parts",
+        "part_count": 1,
+        "pages": [
+          7
+        ],
+        "parts": [
+          {
+            "cid": 34791690049,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=7",
+            "page": 7,
+            "title": "7、数据库设计",
+            "duration": 1091.0
+          }
+        ],
+        "part_fingerprints": [
+          "f77de4921b24786f4147f6dd2a9500da6d62090ef2115355dc77aef5100c0992"
+        ],
+        "digest": "3a927085a54169f81f04e994b632c9ee8d6ee6c9f1d8f0da02fc6ae2669e708e"
+      },
+      "episode_split": false,
+      "single_episode": true,
+      "audio_ready": false
+    },
+    {
+      "block_id": 8,
+      "title": "8、数据库恢复技术",
+      "span": "P08",
+      "episodes": [
+        8
+      ],
+      "units": [
+        {
+          "page": 8,
+          "label": "P08",
+          "split": false,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 1804.0,
+          "duration_sec": 1804.0,
+          "source": {
+            "cid": 35185494098,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=8",
+            "page": 8,
+            "title": "8、数据库恢复技术",
+            "duration": 1804.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 8,
+          "label": "P08",
+          "start_sec": 0.0,
+          "end_sec": 1804.0,
+          "start": "00:00:00",
+          "end": "00:30:04",
+          "duration_sec": 1804.0,
+          "episode_split": false,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 35185494098,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=8",
+              "page": 8,
+              "title": "8、数据库恢复技术",
+              "duration": 1804.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 1804.0,
+      "duration_min": 30.07,
+      "source": {
+        "kind": "parts",
+        "part_count": 1,
+        "pages": [
+          8
+        ],
+        "parts": [
+          {
+            "cid": 35185494098,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=8",
+            "page": 8,
+            "title": "8、数据库恢复技术",
+            "duration": 1804.0
+          }
+        ],
+        "part_fingerprints": [
+          "1dc9087e06c166f8f74080068359ebf76ec6cb618a8129a270fdf4355dfb82ac"
+        ],
+        "digest": "57fd4f86d609d21a1922b2de43a352e74186e38b61a0e006067a4fb9b715ca0a"
+      },
+      "episode_split": false,
+      "single_episode": true,
+      "audio_ready": false
+    },
+    {
+      "block_id": 9,
+      "title": "9、并发控制",
+      "span": "P09",
+      "episodes": [
+        9
+      ],
+      "units": [
+        {
+          "page": 9,
+          "label": "P09",
+          "split": false,
+          "source_offset_sec": 0.0,
+          "start_sec": 0.0,
+          "end_sec": 1646.0,
+          "duration_sec": 1646.0,
+          "source": {
+            "cid": 34792017260,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=9",
+            "page": 9,
+            "title": "9、并发控制",
+            "duration": 1646.0
+          }
+        }
+      ],
+      "segments": [
+        {
+          "page": 9,
+          "label": "P09",
+          "start_sec": 0.0,
+          "end_sec": 1646.0,
+          "start": "00:00:00",
+          "end": "00:27:26",
+          "duration_sec": 1646.0,
+          "episode_split": false,
+          "source": {
+            "offset_sec": 0.0,
+            "metadata": {
+              "cid": 34792017260,
+              "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=9",
+              "page": 9,
+              "title": "9、并发控制",
+              "duration": 1646.0
+            }
+          }
+        }
+      ],
+      "duration_sec": 1646.0,
+      "duration_min": 27.43,
+      "source": {
+        "kind": "parts",
+        "part_count": 1,
+        "pages": [
+          9
+        ],
+        "parts": [
+          {
+            "cid": 34792017260,
+            "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=9",
+            "page": 9,
+            "title": "9、并发控制",
+            "duration": 1646.0
+          }
+        ],
+        "part_fingerprints": [
+          "5ca179f46d0b81b5813a58fa0152c1796d8c5b5cbc2b07a32481b5322986091e"
+        ],
+        "digest": "5ddb23652494b19a84b80c1ee7d1fe08e17ae0ed5dc0261c128c663b7b49268e"
+      },
+      "episode_split": false,
+      "single_episode": true,
+      "audio_ready": false
+    }
+  ]
+}

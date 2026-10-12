@@ -1,0 +1,4 @@
+ERROR: [youtube] rfscVS0vtbw: Unable to download API page: ('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')) (caused by ProxyError("('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))")); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+[!] YouTube 无法提取元数据: https://www.youtube.com/watch?v=rfscVS0vtbw
+    可用 `python src/cli.py info` 查看环境与工具链状态。

@@ -1,0 +1,38 @@
+==============================================================
+video2book 技能自检（技能自包含 + 多宿主声明 + 三域分离）
+  技能根  : /workspace/video2book/skills/video2book   ← 安装单元（SKILL.md + references/ + src/ + scripts/）
+  仓库根  : /workspace/video2book   ← 插件单元（平台声明 / README / LICENSE）
+  容器根  : /workspace/video2book
+  产物根  : /workspace/video2book/skills/video2book/output
+==============================================================
+【结构门禁】——行为契约见 tests/（pytest）
+[PASS] 模块导入无 ImportError
+[PASS] CLI 全部子命令 --help 可用
+[PASS] 入口面收敛（SKILL.md ≤200 行 + 唯一路径 + 子命令与文档同源）
+       (未检测到容器布局标记，跳过「容器根不得是 git 仓库」断言: home=/workspace/video2book)
+[PASS] 三域分离契约（仓库边界/产物在仓库外）
+[PASS] 跨仓库不互引（skill ⇎ omni-media）
+[PASS] 分层边界（core ⇎ generator 单向；prompts 为叶子）
+[PASS] 复制后的技能目录自包含
+[PASS] 文档无悬空小节引用
+[PASS] 子进程硬超时就位
+       (未发现 /workspace/video2book/omni-media/selfcheck.py，跳过)
+[PASS] 听音仓库自检（可选段落）
+[PASS] 死代码与验证产物已移除
+       (未检测到容器布局标记，跳过「旁路目录位于容器根」断言: home=/workspace/video2book)
+[PASS] 宿主旁路目录与产物不入库
+[PASS] 技能自包含布局（skills/<name>/ = 安装单元）
+[PASS] frontmatter 跨工具安全（仅 name/description/license/metadata）
+[PASS] 技能正文无宿主私有工具名（只讲行动语义）
+[PASS] 平台声明层自洽（codex/claude/agents 清单 + 入口文件）
+[PASS] 宿主工具映射层齐备（未证实平台不编造）
+[PASS] 文档层无未证实平台痕迹（不留待确认记录）
+[PASS] 文档无已删除笔记风格残留
+[PASS] 交付矩阵长文类型表齐备
+[PASS] 版本号三处一致
+[PASS] 质检文档口径与门禁一致
+[PASS] 阶段一派发纪律已写入文档
+[PASS] 源码无硬编码本机路径
+[PASS] Python 3.10+ 语法兼容
+==============================================================
+[OK] 全部自检通过

@@ -1,0 +1,65 @@
+[
+  {
+    "page": 1,
+    "title": "1、绪论",
+    "cid": 34791557182,
+    "duration": 1120,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=1"
+  },
+  {
+    "page": 2,
+    "title": "2、关系数据库",
+    "cid": 35185494125,
+    "duration": 2002,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=2"
+  },
+  {
+    "page": 3,
+    "title": "3、SQL",
+    "cid": 34791621080,
+    "duration": 3028,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=3"
+  },
+  {
+    "page": 4,
+    "title": "4、数据库安全性",
+    "cid": 34791624402,
+    "duration": 601,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=4"
+  },
+  {
+    "page": 5,
+    "title": "5、数据库完整性",
+    "cid": 34791686341,
+    "duration": 1214,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=5"
+  },
+  {
+    "page": 6,
+    "title": "6、关系数据库理论",
+    "cid": 34791687600,
+    "duration": 2216,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=6"
+  },
+  {
+    "page": 7,
+    "title": "7、数据库设计",
+    "cid": 34791690049,
+    "duration": 1091,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=7"
+  },
+  {
+    "page": 8,
+    "title": "8、数据库恢复技术",
+    "cid": 35185494098,
+    "duration": 1804,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=8"
+  },
+  {
+    "page": 9,
+    "title": "9、并发控制",
+    "cid": 34792017260,
+    "duration": 1646,
+    "url": "https://www.bilibili.com/video/BV14VqVBrEhc?p=9"
+  }
+]

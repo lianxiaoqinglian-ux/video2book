@@ -1,0 +1,18 @@
+{
+  "classification": "真实B站元数据和原版分块，不是模拟输入；媒体下载失败，未转录或生成教材",
+  "source": "https://www.bilibili.com/video/BV14VqVBrEhc?p=2",
+  "selected_part_duration_sec": 2002,
+  "selected_blocks": [
+    {
+      "block_id": 2,
+      "episodes": [
+        2
+      ],
+      "duration_sec": 2002.0
+    }
+  ],
+  "audio_files": 0,
+  "transcript_files": 0,
+  "article_files": 0,
+  "transcribe_payload_count": 0
+}

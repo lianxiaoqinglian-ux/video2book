@@ -1,0 +1,137 @@
+[
+  {
+    "name": "selfcheck",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "scripts/selfcheck.py"
+    ],
+    "cwd": "/workspace/video2book/skills/video2book",
+    "exit_code": 0,
+    "seconds": 2.94
+  },
+  {
+    "name": "pytest",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 7.66
+  },
+  {
+    "name": "real-bilibili",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "pipeline",
+      "https://www.bilibili.com/video/BV14VqVBrEhc",
+      "--page",
+      "1",
+      "--dry-run",
+      "--article-type",
+      "learning",
+      "--base-dir",
+      "/tmp/video2book-phase1-continuation"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.89
+  },
+  {
+    "name": "real-youtube",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "pipeline",
+      "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "--page",
+      "1",
+      "--dry-run",
+      "--article-type",
+      "learning",
+      "--base-dir",
+      "/tmp/video2book-phase1-continuation"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 1,
+    "seconds": 0.39
+  },
+  {
+    "name": "real-bilibili-audio-only",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "pipeline",
+      "https://www.bilibili.com/video/BV14VqVBrEhc",
+      "--page",
+      "1",
+      "--block-minutes",
+      "25",
+      "--audio-only",
+      "--article-type",
+      "learning",
+      "--base-dir",
+      "/tmp/video2book-phase1-continuation-real",
+      "--task",
+      "phase1-real-db-intro"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 2,
+    "seconds": 0.98
+  },
+  {
+    "name": "real-bilibili-p02-audio",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/src/cli.py",
+      "pipeline",
+      "https://www.bilibili.com/video/BV14VqVBrEhc",
+      "--page",
+      "2",
+      "--block-minutes",
+      "30",
+      "--audio-only",
+      "--article-type",
+      "learning",
+      "--base-dir",
+      "/tmp/video2book-phase1-continuation-real",
+      "--task",
+      "phase1-real-db-relationship"
+    ],
+    "cwd": "/workspace/video2book",
+    "environment_overrides": {
+      "BVB_AUDIO_BLOCK_MIN_MINUTES": "20",
+      "BVB_AUDIO_BLOCK_MAX_MINUTES": "40"
+    },
+    "exit_code": 3,
+    "seconds": 2.3
+  },
+  {
+    "name": "real-queue",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "skills/video2book/scripts/queue_tracker.py",
+      "--dir",
+      "/tmp/video2book-phase1-continuation-real/phase1-real-db-relationship",
+      "--next-transcribe",
+      "1",
+      "--json"
+    ],
+    "cwd": "/workspace/video2book",
+    "exit_code": 0,
+    "seconds": 0.15
+  },
+  {
+    "name": "final-selfcheck",
+    "command": [
+      "/workspace/.venvs/video2book/bin/python",
+      "scripts/selfcheck.py"
+    ],
+    "cwd": "/workspace/video2book/skills/video2book",
+    "exit_code": 0,
+    "seconds": 3.22
+  }
+]
