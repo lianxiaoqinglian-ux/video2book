@@ -1,0 +1,9 @@
+{
+  "draft_present": true,
+  "draft_revision": 3,
+  "base_version_id": "55f4fea3-8ca7-4c59-a63d-8bc0e7410001~cecfgver_6acc39cb68288191911eec18440ae889",
+  "publication_confirmed": false,
+  "reason": "Only the editable draft is exposed; no active-version or environment-status tool is available. The draft/base IDs match the previous round. Do not infer publication from saved rules.",
+  "cdn_configured_in_draft": true,
+  "runtime_cdn_probe_status": 206
+}

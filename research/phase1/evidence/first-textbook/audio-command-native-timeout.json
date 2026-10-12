@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/workspace/.venvs/video2book/bin/python",
+    "skills/video2book/src/cli.py",
+    "pipeline",
+    "https://www.bilibili.com/video/BV14VqVBrEhc",
+    "--page",
+    "2",
+    "--block-minutes",
+    "30",
+    "--audio-only",
+    "--article-type",
+    "learning",
+    "--base-dir",
+    "/tmp/video2book-phase1-continuation-real",
+    "--task",
+    "phase1-real-db-relationship"
+  ],
+  "cwd": "/workspace/video2book",
+  "environment_overrides": {
+    "BVB_AUDIO_BLOCK_MIN_MINUTES": "20",
+    "BVB_AUDIO_BLOCK_MAX_MINUTES": "40"
+  },
+  "validation_timeout_sec": 420,
+  "reason_for_one_retry": "Initial harness timeout 120s was shorter than the repository ffmpeg timeout 180s; no core code or downloader timeouts changed.",
+  "exit_code": 0,
+  "seconds": 1.28
+}

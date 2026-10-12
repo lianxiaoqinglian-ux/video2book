@@ -1,0 +1,38 @@
+{
+  "local_workspace": "/workspace/video2book/output/phase1-real-db-relationship",
+  "publication_of_course_content": false,
+  "audio": {
+    "path": "/workspace/video2book/output/phase1-real-db-relationship/audio/P02_2、关系数据库.tmp.m4a",
+    "bytes": 6934135,
+    "sha256": "24843f5a6f7538b296ea5ebbbd5ae5bec7d3f4e50812e743b0985cc805217f05",
+    "ffprobe_exit": 0,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "aac",
+          "sample_rate": "16000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "duration": "1681.593000"
+      }
+    },
+    "duration_difference_sec": -320.407,
+    "duration_within_2s": false,
+    "decode_exit": 0,
+    "decode_errors": ""
+  },
+  "taskbook": "/workspace/video2book/output/phase1-real-db-relationship/subtitles/BLK02_P02_转录任务书.md",
+  "queue_exit": 0,
+  "next_transcribe_count": 1,
+  "queued_block_ids": [
+    2
+  ],
+  "transcript_count": 0,
+  "article_count": 0,
+  "quality_gate_run": false,
+  "quality_gate_reason": "No authentic transcript or article exists; running gates would not validate a textbook."
+}

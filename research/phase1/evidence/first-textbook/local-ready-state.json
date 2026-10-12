@@ -1,0 +1,69 @@
+{
+  "local_workspace": "/workspace/video2book/output/phase1-real-db-relationship",
+  "audio": {
+    "path": "/workspace/video2book/output/phase1-real-db-relationship/audio/P02_2、关系数据库.m4a",
+    "bytes": 8253459,
+    "sha256": "3bdea7f1b3beb738f056da58196f63f5fadd84c0a2fb523c6c5ea37f4e29c262",
+    "ffprobe_command": [
+      "ffprobe",
+      "-v",
+      "error",
+      "-show_entries",
+      "format=duration:stream=codec_name,sample_rate,channels",
+      "-of",
+      "json",
+      "/workspace/video2book/output/phase1-real-db-relationship/audio/P02_2、关系数据库.m4a"
+    ],
+    "ffprobe_exit": 0,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "aac",
+          "sample_rate": "16000",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "duration": "2001.611000"
+      }
+    },
+    "expected_duration_sec": 2002,
+    "duration_difference_sec": -0.389,
+    "duration_within_2s": true,
+    "full_decode_command": [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-i",
+      "/workspace/video2book/output/phase1-real-db-relationship/audio/P02_2、关系数据库.m4a",
+      "-f",
+      "null",
+      "-"
+    ],
+    "full_decode_exit": 0,
+    "decode_errors": ""
+  },
+  "taskbook": "/workspace/video2book/output/phase1-real-db-relationship/subtitles/BLK02_P02_转录任务书.md",
+  "queue_command": [
+    "/workspace/.venvs/video2book/bin/python",
+    "skills/video2book/scripts/queue_tracker.py",
+    "--dir",
+    "/workspace/video2book/output/phase1-real-db-relationship",
+    "--next-transcribe",
+    "1",
+    "--json"
+  ],
+  "queue_exit": 0,
+  "next_transcribe_count": 1,
+  "queued_block_ids": [
+    2
+  ],
+  "transcript_count": 0,
+  "article_count": 0,
+  "quality_gate_run": false,
+  "quality_gate_reason": "No authentic transcript or article; no textbook quality can be asserted.",
+  "course_content_committed": false
+}

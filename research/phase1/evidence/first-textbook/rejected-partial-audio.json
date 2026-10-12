@@ -1,0 +1,14 @@
+{
+  "reason": "Interrupted .tmp.m4a was reused by BlockPlan.audio_path fallback glob; ffprobe duration1681.593 vs expected2002. Excluded from use.",
+  "moved": [
+    {
+      "original": "/tmp/video2book-phase1-continuation-real/phase1-real-db-relationship/audio/P02_2、关系数据库.tmp.m4a",
+      "preserved": "/tmp/video2book-phase1-continuation-real/phase1-real-db-relationship/validation-rejected/P02_2、关系数据库.tmp.m4a"
+    },
+    {
+      "original": "/workspace/video2book/output/phase1-real-db-relationship/audio/P02_2、关系数据库.tmp.m4a",
+      "preserved": "/workspace/video2book/output/phase1-real-db-relationship/validation-rejected/P02_2、关系数据库.tmp.m4a"
+    }
+  ],
+  "core_code_changed": false
+}

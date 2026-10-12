@@ -1,0 +1,50 @@
+{
+  "base_commit": "3cb2441",
+  "source_bvid": "BV14VqVBrEhc",
+  "cid": 35185494125,
+  "duration_sec": 2002,
+  "full_suite_rerun": false,
+  "credential_presence": {
+    "store_exists": false,
+    "environment_SESSDATA_present": false
+  },
+  "read_audio_available": false,
+  "read_media_available": false,
+  "cdn": {
+    "tested_host": "upos-sz-mirrorcosov.bilivideo.com",
+    "returned_stream_host": "upos-sz-mirrorcosov.bilivideo.com",
+    "signed_stream_tested": true,
+    "request_count": 1,
+    "http_status": 206,
+    "bytes_read": 64,
+    "content_type": "video/mp4",
+    "proxy_connect_established": true
+  },
+  "subtitle_service": {
+    "subtitle_ready": [],
+    "cached": [],
+    "needs_audio": [
+      2
+    ],
+    "written": [],
+    "errors": [],
+    "kept_audio": [],
+    "reason": "missing_sessdata"
+  },
+  "anonymous_official_subtitle_probe": {
+    "obtained_valid_subtitle": false,
+    "diagnosis": {
+      "reason": "无中文字幕轨",
+      "attempts": 1,
+      "coverage": 0.0,
+      "kind": "transient",
+      "dominant_reason": "无中文字幕轨",
+      "failure_stats": {
+        "无中文字幕轨": 1
+      },
+      "last_reason": "无中文字幕轨"
+    },
+    "attempt_budget": 1
+  },
+  "seconds": 3.17
+}
