@@ -1,0 +1,15 @@
+{
+  "origin": "published_transcript_reuse",
+  "repository": "https://github.com/LINJIANG12/video2book-courses",
+  "commit": "675f5d59107498a7e2091d8c46f4f90d97e926cd",
+  "path": "计算机/数据库/MySQL数据库入门到大牛/subtitles/P02_02-为什么使用数据库及数据库常用概念_clean.txt",
+  "source_url": "https://www.bilibili.com/video/BV1iq4y1u7vj?p=2",
+  "bvid": "BV1iq4y1u7vj",
+  "page": 2,
+  "cid": 443302581,
+  "duration_sec": 963,
+  "raw_sha256": "c8ed67adab3812ab3bfd27e7afa1cbd8d595d560408b725f183c270867ddc688",
+  "not_live_caption_fetch": true,
+  "original_audio_alignment_verified": false,
+  "private_use_only": true
+}

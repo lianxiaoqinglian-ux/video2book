@@ -1,0 +1,22 @@
+{
+  "classification": "independent experiment; never used in original transcript or textbook",
+  "model": "k2-fsa/sherpa-onnx streaming zipformer zh 14M 2023-02-23 int8",
+  "download_bytes": 74004050,
+  "archive_sha256": "2cbd71b640d9c37d3784f29367333a4577b0398b62e9deeed418170b081cba8b",
+  "input": "real relationship database lesson, first 60 seconds only",
+  "cpu_threads": 2,
+  "probes": [
+    {
+      "elapsed_sec": 3.78,
+      "max_rss_mb": 112.1
+    },
+    {
+      "elapsed_sec": 9.12,
+      "max_rss_mb": 118.5,
+      "atempo": 0.67,
+      "domain_hotwords": true
+    }
+  ],
+  "decision": "rejected: many core relational algebra terms are incorrectly transcribed; no trusted WER calculated; no full course ASR",
+  "cost": "no paid API or service"
+}

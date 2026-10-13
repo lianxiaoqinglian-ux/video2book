@@ -1,0 +1,7 @@
+{
+  "login_page": 200,
+  "authenticated_library": 200,
+  "persistent_book_after_restart": true,
+  "web_master_worker_rss_mb": 49.0,
+  "data_bytes": 99789
+}

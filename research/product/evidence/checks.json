@@ -1,0 +1,50 @@
+{
+  "selfcheck": {
+    "exit_code": 0
+  },
+  "pytest": {
+    "exit_code": 0,
+    "passed": 743,
+    "seconds": 9.19,
+    "scope": "729 original + 14 initial website tests; subsequent focused tests recorded separately"
+  },
+  "original_selected_block_gate": "ok",
+  "original_full_course_stage1_exit": 1,
+  "reason_full_course_stage1": "355 other course blocks missing; only one lesson processed",
+  "standalone_chromium_screenshot": "not obtained; browser sandbox/socket failures and timeout; visual browser acceptance not claimed",
+  "review_regressions": {
+    "before_fixes": {
+      "failed": 3,
+      "passed": 14
+    },
+    "after_fixes": {
+      "passed": 19,
+      "exit_code": 0,
+      "seconds": 0.6
+    },
+    "fixed": [
+      "stale processing recovery",
+      "cross-process exclusive worker claim",
+      "reject active retry/import",
+      "atomic JSON and Markdown commits",
+      "untrusted captions wait for verification"
+    ]
+  },
+  "pip_check": "No broken requirements found",
+  "codex_cli": {
+    "existing_chatgpt_login": true,
+    "original_codex_home": "read-only; startup failed",
+    "isolated_runtime_original_login_unchanged": true,
+    "proxy_connect_host": "chatgpt.com",
+    "proxy_connect_status": 403,
+    "https_fallback_completed": false,
+    "last_timeout_sec": 90,
+    "generated_article_exists": false
+  },
+  "cloud_draft": {
+    "saved": true,
+    "requires_publish": true,
+    "added_domain": "chatgpt.com",
+    "published_verified": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "grounding": {
+    "block_id": 2,
+    "span": "P02",
+    "title": "02-为什么使用数据库及数据库常用概念",
+    "episodes": [
+      2
+    ],
+    "article": "模块02_02-为什么使用数据库及数据库常用概念_精读长文.md",
+    "article_bytes": 11588,
+    "transcript": "BLK02_P02_逐字稿.md",
+    "transcript_bytes": 17385,
+    "entities": 15,
+    "covered": 14,
+    "coverage": 0.9333,
+    "missing": [
+      "18"
+    ],
+    "status": "ok",
+    "cn_entities": 29,
+    "cn_covered": 21,
+    "cn_coverage": 0.7241,
+    "cn_missing": [
+      "个软件",
+      "关于",
+      "个持久化",
+      "个图",
+      "些介质",
+      "个进程",
+      "个关系",
+      "个意思"
+    ]
+  },
+  "render": {
+    "alert_blocks": 0,
+    "stray_art": 0,
+    "fences_unbalanced": 0,
+    "fence_without_lang": 0,
+    "formula_breaks": 0
+  },
+  "scope": "one genuine lesson only; full-course 355 other blocks pending",
+  "source": "public archived transcript reuse; not live captions or new listening",
+  "frame": {
+    "timestamp_sec": 150,
+    "bytes": 26084,
+    "actual_video": true
+  },
+  "audio_alignment_verified": false
+}

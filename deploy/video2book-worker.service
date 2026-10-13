@@ -1,0 +1,23 @@
+[Unit]
+Description=Video2book serial metadata and subtitle worker
+After=network.target
+
+[Service]
+Type=simple
+User=video2book
+Group=video2book
+WorkingDirectory=/opt/video2book
+EnvironmentFile=/etc/video2book.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/video2book/.venv/bin/python -m website --data-dir /var/lib/video2book worker --loop
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/video2book
+
+[Install]
+WantedBy=multi-user.target

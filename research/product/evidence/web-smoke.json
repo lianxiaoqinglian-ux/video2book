@@ -1,0 +1,15 @@
+{
+  "login_get": 200,
+  "login_post": 200,
+  "submitted_task": "1b8f7a6bbe983bab3c156d9483057544",
+  "real_worker_exit": 0,
+  "before_import_status": "waiting_input",
+  "import_exit": 0,
+  "read_status": 200,
+  "actual_article_visible": true,
+  "actual_frame_http": 200,
+  "download_status": 200,
+  "download_bytes": 13535,
+  "anonymous_download": 302,
+  "csrf_rejected": 403
+}
