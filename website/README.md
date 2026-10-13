@@ -30,6 +30,13 @@ SQLite、私有 secret key、Markdown 存在 data-dir，保留该目录才能保
 
 持续处理可加 `--loop`。只复用原版 `BilibiliParser` / `fetch_episode_subtitle`，匿名字幕尝试1次，不读取私人Cookie。导入已提交任务可加 `--task-id <ID>`，来源必须与该任务完全一致。
 
-任务中断后串行worker会恢复遗留processing；任务处理时重试/导入被拒绝以防重复或覆盖。缓存原子提交；损坏JSON会重取。不可信字幕留在waiting_input。网站写作worker尚未实现，`waiting_writer`需合法外部Worker/宿主沿原版learning写作后使用import-book交接。
+任务中断后串行worker会恢复遗留processing；任务处理时重试/导入被拒绝以防重复或覆盖。缓存原子提交；损坏JSON会重取。不可信字幕留在waiting_input。默认关闭API时，`waiting_writer`需合法外部Worker/宿主沿原版learning写作后使用import-book交接；新增可选写作适配见下。
 
 每次worker结果追加到data-dir中的 `{task_id}_events.jsonl`，详细进程日志由systemd journal保存。当前不下载长视频媒体，也不自动删除教材；先按部署说明备份，日后媒体缓存只清理可重建文件。
+
+
+## 可选远程自动写作（真API尚未验收）
+
+现有串行worker可复用可信字幕缓存并调用SiliconFlow，不改网页或SQLite任务结构。默认关闭；在私有服务环境设置 `SILICONFLOW_API_KEY`、`SILICONFLOW_MODEL=Qwen/Qwen3.5-122B-A10B` 和 `BOOKSITE_AUTO_WRITE=1`。已生成候选通过原版单块门禁后发布；截断、低覆盖或网络失败保留阶段。模型调用可能计费，当前单价/模型可用性未核实。API超时不自动重付费；核对账单后才人工处理不确定回执。详见 [模型接口](../docs/product/MODEL_SERVICES.md)。
+
+只读诊断：`python -m website --data-dir <目录> provider-check --live`。不会推理，不打印密钥；缺密钥/未列出指定模型/网络失败退出1。字幕时间线保留在 `*_transcript.json`，尚未做到教材逐段对齐；无字幕转录与视觉仍未自动接通。新接口测试：`python -m pytest website/test_generation.py -q`；其输入与响应是标注的测试数据，不能当真实转换成功。

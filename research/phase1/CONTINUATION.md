@@ -1,3 +1,15 @@
+# 最新继续点：国内测试版可选写作适配与私有备份
+
+从d43e6f5继续。用户明确要求长期国内2核4GB部署，Cloud只研发；不依赖Cloud订阅CLI作网站API。只补website/generation.py与现有worker调用，复用原版learning提示词、BlockPlan、本块门禁，原版核心/Skill未改。默认BOOKSITE_AUTO_WRITE=0；提供真实SILICONFLOW_API_KEY并设1后可消费可信字幕/等待写作任务。原有网页/SQLite/单进程锁、人工导入继续复用。
+
+真实SF调用尚未验收：用户给的“你的 SiliconFlow 密钥”为占位文字，环境无key；当前代理拒绝官方域名，已存密钥要求和api.siliconflow.cn网络草稿，保存不等于发布。请求模型Qwen/Qwen3.5-122B-A10B现时ID/价格/上限均未证实。14项新接口测试为自有输入/模拟API，不称真实教材。7项受影响worker回归、11项备份测试通过，原版selfcheck通过，未重复旧全套。
+
+教材包仍存在且已私有备份实际恢复校验：output/private-backups/first-textbook-readable-20261013.zip和website-data-20261013.zip。SHA256/SQLite完整性通过，排除secret.key。只在云本地ignored，必须下载到自有安全存储才能跨环境保留，未公开课程正文。
+
+下一步只做：用户安全配置key并发布草稿后，provider-check --live读取model清单、核实价格/现有额度，再用真实短课字幕验收Qwen写作。无字幕优先复用omni-media ext的transcriptions接云ASR，协议有代码但兼容/准确性未测；视觉另验。不要扩新架构或下载大本地模型。详见research/product/README.md与docs/product/MODEL_SERVICES.md。
+
+---
+
 # 最新继续点：已生成真实教材，并实现私人教材库
 
 本轮从 `2d4ce20` 继续，用户已授权轻量网站开发及一次独立免费ASR实验；此前“只研究/不开发”的阶段限制已被后续产品任务替代。原版Skill和核心源码未改。

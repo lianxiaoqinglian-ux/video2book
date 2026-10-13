@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-10-13",
+  "scope": "只读官方资料研究；国内Ubuntu 22.04、2核4GB；无真实API密钥；未调用推理、未下载模型、未购买API",
+  "recommended_route": "先用课程已有字幕验证教材写作。无字幕块保留原版read_media通道，优先评估omni-media ext的transcriptions模式连接SiliconFlow云ASR；Qwen独立负责文字写作。云ASR未通过专业术语样本验收前，不宣称可替代当前听音阻塞。必要画面必须另验图像输入通道。",
+  "siliconflow": {
+    "base_url_requested": "https://api.siliconflow.cn/v1",
+    "writing_model_requested": "Qwen/Qwen3.5-122B-A10B",
+    "model_availability": "未验证。官方公开旧OpenAPI无此ID；缺失不构成不存在的证据。需当前官方模型页或带授权只读GET /v1/models核验。",
+    "context_and_max_output": null,
+    "price": null,
+    "limits_status": "当前上下文、最大输出、价格、ASR分钟计费与文件长度/体积上限均未取得可引用官方证据，不给推测数值。",
+    "asr_documented_design": {
+      "source": "https://github.com/siliconflow/siliconcloud/blob/main/openapi.yaml",
+      "fetched_status": 200,
+      "request": "POST /audio/transcriptions；multipart/form-data；必填file（二进制文件）和model",
+      "documented_model": "FunAudioLLM/SenseVoiceSmall",
+      "response": "application/json {text: string}",
+      "boundary": "旧公开schema说明API设计，不证明今日供应、价格、专业术语准确性；未见FunASR模型、音频时长上限、segments时间戳、language/prompt/response_format字段。"
+    },
+    "vision": "旧公开schema含image_url消息部件，可传URL或base64；其说明含过时gpt-4o字样，不足以证实指定Qwen当前支持图像。视觉模型与音频模型能力必须分别核验，不得把文字对话接口当听音通道。",
+    "blocked_official_sources": [
+      "https://docs.siliconflow.cn/llms.txt",
+      "https://docs.siliconflow.cn/cn/api-reference/audio/create-audio-transcriptions",
+      "https://www.siliconflow.cn/pricing",
+      "https://api.siliconflow.cn/v1/models"
+    ],
+    "blocker": "当前云环境代理拒绝官方域名访问；SILICONFLOW_API_KEY缺失。与国内VPS实际连通性没有等价关系。"
+  },
+  "omni_media": {
+    "sources": [
+      "https://github.com/LINJIANG12/omni-media/blob/main/README.md",
+      "https://github.com/LINJIANG12/omni-media/blob/main/omni_media/providers/openai.py",
+      "https://github.com/LINJIANG12/omni-media/blob/main/omni_media/config.example.json"
+    ],
+    "fetched_status": 200,
+    "supported_route": "ext配置protocol=openai、openai_mode=transcriptions、base_url=https://api.siliconflow.cn/v1、model=云ASR ID；如需总结/问答，另配置text_model=Qwen/Qwen3.5-122B-A10B。",
+    "compatibility": "代码已实现multipart /audio/transcriptions与可选第二段文字chat/completions，理论协议路径吻合；无密钥无法验证真实SF兼容性，不能称已开通。",
+    "format_caveat": "先发verbose_json，遇部分4xx退json；额外提交language和prompt。SF旧schema不保证接受这些字段。只有text时没有真实句级时间戳，不能伪造。",
+    "credentials_caveat": "上游模板明确只读私有config.json，不读凭证环境变量。仅声明SILICONFLOW_API_KEY不能直接让ext生效；需按部署约束安全注入未入Git配置。",
+    "resource_advice": "上游默认30分钟、35MB、5并发属于客户端建议，不能当SF服务限制或2核4GB实测。首次样本用短切片、单并发；凭当前证据不承诺时延与内存。",
+    "vision_boundary": "已核查OpenAI适配器处理音频input_audio或ASR；未发现视频画面输入证据。read_media名称不能证明它能理解课件、公式或板书。"
+  },
+  "free_cpu_asr_research_only": [
+    {
+      "candidate": "FunASR + SenseVoiceSmall / FSMN-VAD",
+      "source": "https://github.com/modelscope/FunASR",
+      "evidence": "当前官方README有device=cpu示例、SenseVoiceSmall为234M、CPU服务方案；Paraformer中文模型亦可研究。",
+      "status": "尚未下载或试跑；2核4GB内存、实时率、专业术语正确率未知。仅作独立研究，不接入原版video2book绕过听音要求。"
+    },
+    {
+      "candidate": "whisper.cpp较小量化模型",
+      "source": "https://github.com/ggml-org/whisper.cpp",
+      "evidence": "成熟现成CPU方案候选；本轮未读取其官方性能资料，未跑课程样本。",
+      "status": "不得声称比已拒绝的小型sherpa-onnx探针更准确；中文专业课程必须另行实测。"
+    }
+  ],
+  "codex_subscription": {
+    "source_read": "https://github.com/openai/codex/blob/main/README.md",
+    "fetched_status": 200,
+    "official_fact": "官方Codex CLI README明确支持Sign in with ChatGPT，列举Plus/Pro/Business/Edu/Enterprise，也提供单独API-key登录选项。",
+    "boundary": "可按官方CLI登录使用套餐内Codex；不把订阅认证转为第三方OpenAI-compatible网关或SiliconFlow凭据，不把CLI听音能力当已证实。订阅与API调用使用不同认证/计费路径，不可假设共用额度或不限量。",
+    "current_plan_limits_status": "官方套餐说明和认证网页本轮被代理拒绝，未核查当前精确额度。",
+    "sources_to_verify": [
+      "https://developers.openai.com/codex/auth/",
+      "https://help.openai.com/en/articles/11369540-codex-in-chatgpt"
+    ]
+  },
+  "cost_examples_without_invented_price": {
+    "writing": "官方价格若为每百万输入token P_in 元、每百万输出token P_out 元，则一次30000输入+20000输出token成本=0.03*P_in+0.02*P_out元。实际教材分块/复审/重试全部求和，缓存及推理token以供应商实际usage与账单为准。",
+    "audio": "若官方按每分钟R元收费，60分钟课程=60*R元；若按每小时H元，等于H元。仅为单位换算，当前未证明SF按上述哪种方式计费。",
+    "cpu": "现成开源本地ASR无云推理单价，但仍占VPS CPU、内存、存储和运行时间，不能据此称准确性或吞吐已满足要求。"
+  },
+  "minimum_external_prerequisites": [
+    "在安全环境设置提供真实SiliconFlow API密钥，并开放api.siliconflow.cn；密钥不进聊天、Git或研究证据。",
+    "在部署机器安全生成omni-media私有配置；核验当前可用ASR/写作/视觉model ID与价格。",
+    "用户给出明确小额付费样本授权/预算上限后，才能发真实ASR和写作验收请求；此轮无授权、无收费调用。",
+    "无字幕路线先用包含专业术语的已授权课程短样本验收ASR，并校核时戳；必要视觉另用实际课件帧验收。",
+    "若考虑本地免费ASR替代，必须另行明确改变原版听音约束并独立验收，不能默认绕过。"
+  ]
+}

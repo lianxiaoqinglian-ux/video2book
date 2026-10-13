@@ -1,0 +1,37 @@
+{
+  "scope": "new adapter contracts only; owned test content and mocked HTTP responses, no provider inference",
+  "new_adapter_tests": {
+    "passed": 14,
+    "exit_code": 0
+  },
+  "affected_worker_regressions": {
+    "passed": 7,
+    "exit_code": 0
+  },
+  "previous_729_full_suite_repeated": false,
+  "previous_19_web_full_suite_repeated": false,
+  "real_probe": {
+    "base_url": "https://api.siliconflow.cn/v1",
+    "model": "Qwen/Qwen3.5-122B-A10B",
+    "key_present": false,
+    "automatic_writing_enabled": false,
+    "live_model_verified": false,
+    "inference_tested": false,
+    "price_verified": false,
+    "status": "missing_key"
+  },
+  "original_engine_modified": false,
+  "native_agent_SOP_claimed": false,
+  "actual_api_spend_cny": 0,
+  "real_generation_verified": false,
+  "provider_model_price_verified": false,
+  "draft": {
+    "secret_name": "SILICONFLOW_API_KEY",
+    "added_domain": "api.siliconflow.cn",
+    "saved": true,
+    "requires_publish": true
+  },
+  "default_auto_write": false,
+  "single_worker": true,
+  "local_large_model": false
+}

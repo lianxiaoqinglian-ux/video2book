@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, parse_qs
 from . import create_app, normalize_url
 from .storage import safe_path
+from .generation import enabled, generate_book, _atomic
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'skills/video2book'))
 from src.core.parser import BilibiliParser
 from src.core.subtitles import fetch_episode_subtitle
@@ -36,7 +37,8 @@ def _run_locked(root):
         c.row_factory=sqlite3.Row
         c.execute('BEGIN IMMEDIATE')
         c.execute("UPDATE tasks SET status='queued' WHERE status='processing'")
-        row=c.execute("SELECT * FROM tasks WHERE status='queued' ORDER BY rowid LIMIT 1").fetchone()
+        eligible = "('queued','waiting_writer')" if enabled() else "('queued')"
+        row=c.execute("SELECT * FROM tasks WHERE status IN "+eligible+" ORDER BY rowid LIMIT 1").fetchone()
         if not row:return False
         c.execute("UPDATE tasks SET status='processing' WHERE id=?",(row['id'],))
     tid=row['id'];status='failed';message=''
@@ -61,6 +63,11 @@ def _run_locked(root):
                 elif '接口请求异常' in str(diagnosis.get('reason','')):raise RuntimeError('字幕网络接口失败：'+str(diagnosis['reason']))
             if sub and sub.get('trustworthy') is True:
                 status='waiting_writer';message='已缓存真实平台字幕及时间线，等待教材写作；尚未生成教材。'
+                if enabled():
+                    generated=generate_book(root,tid,selected,sub)
+                    body=generated['markdown'].read_text(encoding='utf-8')
+                    _atomic(safe_path(root,tid+'.md'),body)
+                    status='completed';message='由SiliconFlow模型按原版learning提示词生成，已通过本块机器门禁；原声准确性、画面完整性及练习答案未人工核查。来源为真实平台字幕，时间线保存在字幕侧车。'
             else:status='waiting_input';message=('已取得字幕但可信性未通过，需要人工核查；未转换。' if sub else '匿名接口没有可用中文字幕，需要真实字幕或听音通道；未转换。')
         title=selected.get('title') or info.get('title') or row['title']
     except Exception as e:

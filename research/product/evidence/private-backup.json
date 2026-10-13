@@ -1,0 +1,69 @@
+{
+  "date_utc": "2026-10-13",
+  "scope": "local private backups only; no upload or persistent-storage claim",
+  "tests": {
+    "command": "/workspace/.venvs/video2book/bin/python -m pytest website/test_backup.py -q",
+    "passed": 11,
+    "exit_code": 0
+  },
+  "packages": [
+    {
+      "archive": "output/private-backups/first-textbook-readable-20261013.zip",
+      "archive_sha256": "3c4ae4bae86b6ac48c4275c806283d9a3e8fc6b7a5c6382156a0615496ccfb11",
+      "archive_bytes": 38160,
+      "mode": "0o600",
+      "files": {
+        "frame-150.jpg": {
+          "sha256": "59d0adf9be813582b971b59cd55ee8877dbaff6e98fe5e5ef22c97567b0650fc",
+          "size": 26084
+        },
+        "provenance.json": {
+          "sha256": "ec85e290ff277f74810196b7d6b3c53245a514649769609097221fa7ca30f674",
+          "size": 648
+        },
+        "textbook.html": {
+          "sha256": "7ad45fe91e016d9de1d672ce1023b37567191d773cad3f7c32fe1eec516305ee",
+          "size": 15939
+        },
+        "textbook.md": {
+          "sha256": "68e87d5d1f2ea371f88497af6d70774806b1de44cde6f21a1804209c8d0f3d85",
+          "size": 13535
+        }
+      },
+      "excluded": [],
+      "archive_verify": "passed",
+      "restore_verify": "passed"
+    },
+    {
+      "archive": "output/private-backups/website-data-20261013.zip",
+      "archive_sha256": "2ed2e13d648691932d99d3da0982069eb4e60c7676bb9c654ea2106da1ba8471",
+      "archive_bytes": 43419,
+      "mode": "0o600",
+      "files": {
+        "1b8f7a6bbe983bab3c156d9483057544.md": {
+          "sha256": "68e87d5d1f2ea371f88497af6d70774806b1de44cde6f21a1804209c8d0f3d85",
+          "size": 13535
+        },
+        "1b8f7a6bbe983bab3c156d9483057544_assets/frame-150.jpg": {
+          "sha256": "59d0adf9be813582b971b59cd55ee8877dbaff6e98fe5e5ef22c97567b0650fc",
+          "size": 26084
+        },
+        "1b8f7a6bbe983bab3c156d9483057544_metadata.json": {
+          "sha256": "e0558f586a25c7e3f95361bcf8115c3f88e5c247151d05b892ee22afc08bc0d2",
+          "size": 47818
+        },
+        "library.sqlite3": {
+          "sha256": "6bf3cf7ca8a4d47fcdc84e8d33211f66ee2f3cf6395f3eed2d53446cbae1940e",
+          "size": 12288
+        }
+      },
+      "excluded": [
+        "secret.key"
+      ],
+      "archive_verify": "passed",
+      "restore_verify": "passed",
+      "sqlite_integrity_check": "ok"
+    }
+  ],
+  "cross_environment_recovery": "User must download to their own secure storage or private server; secrets must be configured separately."
+}
